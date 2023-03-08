@@ -27,8 +27,8 @@ st.dataframe(fruits_to_show)
 #display fruityvice api response
 st.header('Fruityvice Fruit Advice!')
 
-fruityvice_response = rq.get("https://fruityvice.com/api/fruit/watermelon")
-st.text(fruityvice_response.json())
+fruityvice_response = rq.get("https://fruityvice.com/api/fruit/" + "kiwi")
+
 
 #Take the json version of the response and normalize it
 fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
